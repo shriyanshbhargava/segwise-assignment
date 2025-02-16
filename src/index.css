@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #fefffe;
+}
+
+/* Hover states */
+.hover-delete:hover .delete-icon {
+  color: #f56565;
+}
+
+.filter-tag:hover {
+  background-color: #edf2f7;
+}
+
+/* Focus states */
+.ant-input:focus,
+.ant-select-focused .ant-select-selector {
+  border-color: #4299e1 !important;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2) !important;
+}
+
+/* Custom styles for the filter button with count */
+.filter-count {
+  background-color: #48bb78;
+  color: white;
+  border-radius: 9999px;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.25rem;
+}
+
+/* Transition effects */
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Selected state for category tabs */
+.category-tab.selected {
+  color: #4299e1;
+}
+
+/* Custom styles for logical operator buttons */
+.logic-button {
+  border-radius: 9999px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.logic-button.selected {
+  background-color: #edf2f7;
+}
+
+/* Dropdown menu items hover effect */
+.dropdown-item:hover {
+  background-color: #f7fafc;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 2px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the thumb on hover */
+}
